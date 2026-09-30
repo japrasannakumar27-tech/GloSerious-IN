@@ -1,0 +1,350 @@
+/* ==========================================================================
+   GLOSERIOUSIN - BASE, RESET & TYPOGRAPHY
+   ========================================================================== */
+
+/* Modern CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-warm-ivory);
+  color: var(--color-deep-espresso);
+  line-height: var(--lh-body);
+  font-size: var(--fs-base);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif-heading);
+  color: var(--color-deep-espresso);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-heading);
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: clamp(2.375rem, 5vw, 4.25rem); /* 38-44px mobile, 56-72px desktop */
+  font-weight: var(--fw-medium);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2.125rem, 3.5vw, 2.875rem); /* 34-46px */
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: clamp(1.375rem, 2vw, 1.75rem); /* 22-28px */
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: var(--fw-medium);
+}
+
+p {
+  color: var(--color-espresso-muted);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--container-pad-mobile);
+    padding-right: var(--container-pad-mobile);
+  }
+}
+
+.section-spacing {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+}
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--space-3xl) auto;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-muted-rose);
+  margin-bottom: var(--space-xs);
+}
+
+.section-title {
+  margin-bottom: var(--space-sm);
+  color: var(--color-deep-espresso);
+}
+
+.section-subtitle {
+  font-size: 1.0625rem;
+  color: var(--color-espresso-muted);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Luxury Editorial Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  height: var(--height-button);
+  padding: 0 1.875rem;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Primary Muted Rose CTA with Espresso Hover & Subtle Lift */
+.btn-primary {
+  background-color: var(--color-muted-rose);
+  color: var(--color-white);
+  border: 1px solid var(--color-muted-rose);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-deep-espresso);
+  border-color: var(--color-deep-espresso);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(43, 33, 29, 0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button (Outline / Minimalist) */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-deep-espresso);
+  border: 1px solid var(--color-deep-espresso);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-deep-espresso);
+  color: var(--color-soft-cream);
+  transform: translateY(-2px);
+}
+
+/* Inverted White Button */
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-deep-espresso);
+  border: 1px solid var(--color-white);
+}
+
+.btn-white:hover {
+  background-color: var(--color-deep-espresso);
+  border-color: var(--color-deep-espresso);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Ghost / Underline Link Button */
+.btn-text {
+  background: none;
+  border: none;
+  padding: 0;
+  height: auto;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-deep-espresso);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  position: relative;
+}
+
+.btn-text::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform-origin: right;
+  transition: transform var(--transition-normal);
+}
+
+.btn-text:hover::after {
+  transform: scaleX(0.7);
+  transform-origin: left;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 0.6875rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: var(--fw-semibold);
+  border-radius: var(--radius-xs);
+}
+
+.badge-rose {
+  background-color: var(--color-muted-rose);
+  color: var(--color-white);
+}
+
+.badge-cream {
+  background-color: var(--color-soft-cream);
+  color: var(--color-deep-espresso);
+  border: 1px solid var(--color-light-border);
+}
+
+.badge-sage {
+  background-color: var(--color-soft-sage);
+  color: var(--color-deep-espresso);
+}
+
+/* Subtle Star Rating */
+.star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #D4AF37; /* Refined Champagne Gold */
+  font-size: 0.8125rem;
+}
+
+.rating-score {
+  font-size: var(--fs-xs);
+  color: var(--color-espresso-muted);
+  font-weight: var(--fw-medium);
+  margin-left: 4px;
+}
+
+/* Subtle Icon Buttons */
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--color-deep-espresso);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.icon-btn:hover {
+  background-color: var(--color-espresso-ghost);
+  color: var(--color-muted-rose);
+}
+
+.icon-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: var(--color-muted-rose);
+  color: var(--color-white);
+  font-size: 0.625rem;
+  font-weight: var(--fw-semibold);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-warm-ivory);
+}
+
+/* Scrollbar refinement */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-warm-taupe);
+}

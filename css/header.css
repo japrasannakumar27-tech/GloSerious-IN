@@ -1,0 +1,222 @@
+/* ==========================================================================
+   GLOSERIOUSIN - HEADER & NAVIGATION
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: var(--color-warm-ivory);
+  transition: background-color var(--transition-normal), backdrop-filter var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.site-header.is-scrolled {
+  background-color: rgba(248, 244, 238, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 2px 16px rgba(43, 33, 29, 0.04);
+}
+
+/* Announcement Bar */
+.announcement-bar {
+  background-color: var(--color-deep-espresso);
+  color: var(--color-warm-ivory);
+  font-size: 0.6875rem;
+  font-weight: var(--fw-medium);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  height: var(--height-announcement);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.announcement-bar span {
+  opacity: 0.95;
+}
+
+/* Main Navigation Bar */
+.navbar {
+  height: var(--height-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+/* Logo */
+.nav-logo {
+  font-family: var(--font-serif);
+  font-size: 1.625rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: var(--color-deep-espresso);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-logo:hover {
+  color: var(--color-muted-rose);
+}
+
+/* Center Links */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.nav-link {
+  font-size: 0.8125rem;
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--color-deep-espresso);
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-muted-rose);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition-normal);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-muted-rose);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Right Actions */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-actions .icon-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.6;
+}
+
+/* Mobile Hamburger Toggle */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 8px;
+  color: var(--color-deep-espresso);
+  cursor: pointer;
+}
+
+.mobile-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Nav Drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 320px;
+  max-width: 85vw;
+  height: 100vh;
+  background-color: var(--color-soft-cream);
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-drawer);
+  transition: left var(--transition-normal);
+}
+
+.mobile-drawer.is-open {
+  left: 0;
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-light-border);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.mobile-nav-links .nav-link {
+  font-size: 1.125rem;
+  font-family: var(--font-serif);
+  letter-spacing: 1px;
+}
+
+.mobile-drawer-footer {
+  border-top: 1px solid var(--color-light-border);
+  padding-top: 1.5rem;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(43, 33, 29, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.drawer-backdrop.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive Navigation */
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+  
+  .nav-logo {
+    justify-self: center;
+    font-size: 1.375rem;
+  }
+}

@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GLOSERIOUS IN | Glow Naturally. Feel Unstoppable. — Premium Clean Skincare</title>
+  <meta name="description"
+    content="Discover GLOSERIOUSIN: Visually luxurious, clean, botanical skincare essentials designed to celebrate your skin, confidence, and natural everyday glow." />
+
+  <!-- Preconnect to Google Fonts for optimal performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/shop.css" />
+  <link rel="stylesheet" href="css/pdp.css" />
+  <link rel="stylesheet" href="css/modals-drawers.css" />
+</head>
+
+<body>
+
+  <!-- ========================================================================
+       4. HEADER / NAVIGATION
+       ======================================================================== -->
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar" role="complementary" aria-label="Announcement">
+    <span>FREE SHIPPING ON ORDERS OVER $50 • DISCOVER YOUR GLOW</span>
+  </aside>
+
+  <!-- Sticky Main Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Open mobile navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="#home" class="nav-logo" aria-label="GLOSERIOUSIN Home">
+          GLOSERIOUS IN
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#categories" class="nav-link">Collections</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#journal" class="nav-link">Journal</a></li>
+        </ul>
+
+        <!-- Right Header Utility Actions -->
+        <div class="nav-actions">
+          <button class="icon-btn open-search-btn" aria-label="Search boutique" title="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <button class="icon-btn" onclick="App.showToast('Account portal: Welcome back!')" aria-label="User Account"
+            title="Account">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <button class="icon-btn open-wishlist-btn" aria-label="Wishlist saved items" title="Wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+              </path>
+            </svg>
+            <span class="icon-badge wishlist-count-badge" style="display: none;">0</span>
+          </button>
+          <button class="icon-btn open-cart-btn" aria-label="Shopping bag" title="Shopping Bag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="icon-badge cart-count-badge" style="display: none;">0</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <span class="nav-logo" style="font-size: 1.25rem;">GLOSERIOUSIN</span>
+      <button class="drawer-close-btn" id="mobileDrawerClose" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="nav-link" onclick="Navigation.switchView('home')">Home</a></li>
+      <li><a href="#shop" class="nav-link" onclick="Navigation.switchView('shop')">Shop All</a></li>
+      <li><a href="#categories" class="nav-link"
+          onclick="Navigation.switchView('home'); setTimeout(() => document.getElementById('categories').scrollIntoView(), 150);">Collections</a>
+      </li>
+      <li><a href="#about" class="nav-link"
+          onclick="Navigation.switchView('home'); setTimeout(() => document.getElementById('about').scrollIntoView(), 150);">About
+          Us</a></li>
+      <li><a href="#journal" class="nav-link"
+          onclick="Navigation.switchView('home'); setTimeout(() => document.getElementById('journal').scrollIntoView(), 150);">Journal</a>
+      </li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <p style="font-size: 0.8125rem; margin-bottom: 1rem; color: var(--color-espresso-muted);">Free shipping on orders
+        over $50</p>
+      <button class="btn btn-primary btn-block open-cart-btn">View Bag</button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MAIN APP CONTAINER (VIEWS)
+       ======================================================================== -->
+  <main id="appMainContent">
+
+    <!-- ----------------------------------------------------------------------
+         VIEW 1: HOME PAGE
+         ---------------------------------------------------------------------- -->
+    <div id="homeView">
+
+      <!-- 5. HERO SECTION -->
+      <section class="hero-section" id="hero" aria-label="Hero Introduction">
+        <div class="hero-media-wrapper">
+          <img src="assets/images/hero-glow.jpg" alt="Woman with radiant natural glowing skin - GLOSERIOUSIN"
+            class="hero-image" />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <span class="hero-eyebrow">THE NEW STANDARD OF BEAUTY</span>
+            <h1 class="hero-title">
+              Glow Naturally.
+              <span>Feel Unstoppable.</span>
+            </h1>
+            <p class="hero-description">
+              Thoughtfully crafted beauty essentials designed to celebrate your skin, your confidence, and your everyday
+              glow.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#shop" class="btn btn-primary" onclick="Navigation.switchView('shop')">
+                SHOP THE COLLECTION
+              </a>
+              <a href="#about" class="btn btn-secondary">
+                EXPLORE OUR STORY
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. TRUST / BRAND VALUES STRIP -->
+      <section class="trust-strip" aria-label="Brand Guarantees">
+        <div class="container">
+          <div class="trust-grid">
+            <!-- 1. Clean Formulas -->
+            <div class="trust-item">
+              <div class="trust-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>CLEAN FORMULAS</h4>
+                <p>Thoughtfully selected ingredients</p>
+              </div>
+            </div>
+
+            <!-- 2. Cruelty Free -->
+            <div class="trust-item">
+              <div class="trust-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h4>CRUELTY FREE</h4>
+                <p>Beauty without compromise</p>
+              </div>
+            </div>
+
+            <!-- 3. Skin Loving -->
+            <div class="trust-item">
+              <div class="trust-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                  <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                  <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                </svg>
+              </div>
+              <div>
+                <h4>SKIN LOVING</h4>
+                <p>Created for everyday rituals</p>
+              </div>
+            </div>
+
+            <!-- 4. Conscious Beauty -->
+            <div class="trust-item">
+              <div class="trust-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>CONSCIOUS BEAUTY</h4>
+                <p>Better choices for a better future</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. SHOP BY CATEGORY -->
+      <section class="categories-section section-spacing" id="categories" aria-labelledby="catHeading">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">CURATED COLLECTIONS</span>
+            <h2 class="section-title" id="catHeading">Find Your Ritual</h2>
+            <p class="section-subtitle">Simple essentials for every step of your beauty routine.</p>
+          </div>
+          <div class="category-grid" id="categoryGrid">
+            <!-- Dynamically populated from data.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. BEST SELLERS SECTION -->
+      <section class="bestsellers-section section-spacing" id="bestsellers" aria-labelledby="bestSellersHeading">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">MOST LOVED</span>
+            <h2 class="section-title" id="bestSellersHeading">Beauty Favorites</h2>
+            <p class="section-subtitle">Discover the products our community keeps coming back to.</p>
+          </div>
+          <div class="product-grid" id="bestSellersGrid">
+            <!-- 4-col desktop, 2-col mobile populated from data.js -->
+          </div>
+          <div style="text-align: center; margin-top: 3.5rem;">
+            <a href="#shop" class="btn btn-secondary" onclick="Navigation.switchView('shop')">
+              VIEW ALL FORMULATIONS
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. FEATURED PRODUCT / EDITORIAL SECTION (THE GLOW EDIT) -->
+      <section class="editorial-split-section" id="glow-edit" aria-label="The Glow Edit Spotlight">
+        <div class="editorial-split-grid">
+          <!-- LEFT: Close up skincare dropper bottle with serum drops on travertine -->
+          <div class="editorial-media-column">
+            <img src="assets/images/glow-edit-bottle.jpg"
+              alt="GLOSERIOUSIN Facial Serum on natural travertine with water drops" />
+          </div>
+          <!-- RIGHT: Cream background with editorial storytelling -->
+          <div class="editorial-content-column">
+            <span class="editorial-tag">THE GLOW EDIT</span>
+            <h2 class="editorial-title">Meet your skin's new everyday essential.</h2>
+            <p class="editorial-text">
+              An effortless ritual designed to hydrate, nourish, and leave your skin with a naturally luminous finish.
+            </p>
+            <div class="editorial-benefits-list">
+              <div class="benefit-item">
+                <span class="benefit-check">✓</span>
+                <span>Deep hydration</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-check">✓</span>
+                <span>Lightweight texture</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-check">✓</span>
+                <span>Skin-loving ingredients</span>
+              </div>
+              <div class="benefit-item">
+                <span class="benefit-check">✓</span>
+                <span>Suitable for everyday use</span>
+              </div>
+            </div>
+            <div>
+              <a href="#product-dew-glow-serum" class="btn btn-primary"
+                onclick="App.navigateTo('product', 'dew-glow-serum')">
+                DISCOVER THE GLOW EDIT
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. INGREDIENTS / PHILOSOPHY SECTION -->
+      <section class="philosophy-section section-spacing" id="philosophy" aria-labelledby="philosophyHeading">
+        <!-- Subtle botanical decorative SVG -->
+        <svg class="philosophy-botanical-bg" viewBox="0 0 200 200" fill="none" stroke="currentColor">
+          <path
+            d="M100 190 C 80 140, 30 110, 10 90 C 40 80, 70 90, 100 130 C 130 90, 160 80, 190 90 C 170 110, 120 140, 100 190 Z"
+            fill="rgba(255,255,255,0.2)" />
+          <path d="M100 190 L 100 20" stroke="var(--color-muted-rose)" stroke-width="1.5" />
+        </svg>
+
+        <div class="container">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <span class="section-eyebrow" style="color: var(--color-deep-espresso);">OUR ETHOS</span>
+            <h2 class="section-title" id="philosophyHeading">Beauty, With Intention.</h2>
+            <p class="section-subtitle" style="color: var(--color-deep-espresso); opacity: 0.85;">
+              We believe beauty should feel as good as it looks. Every GLOSERIOUSIN formula is thoughtfully created with
+              carefully selected ingredients and a focus on simple, effective rituals.
+            </p>
+          </div>
+
+          <div class="philosophy-columns">
+            <div class="philosophy-card">
+              <div class="philosophy-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V18h-2v-1.07A6 6 0 0 1 6.07 12H5v-2h1.07A6 6 0 0 1 11 4.07V3h2v1.07A6 6 0 0 1 17.93 10H19v2h-1.07A6 6 0 0 1 13 16.93z" />
+                </svg>
+              </div>
+              <h3>Thoughtfully Selected</h3>
+              <p>Ingredients chosen with purpose to honor and support the barrier.</p>
+            </div>
+
+            <div class="philosophy-card">
+              <div class="philosophy-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </div>
+              <h3>Skin First</h3>
+              <p>Formulas designed around your skin, working in harmony with cellular renewal.</p>
+            </div>
+
+            <div class="philosophy-card">
+              <div class="philosophy-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                  <line x1="4" y1="22" x2="4" y2="15"></line>
+                </svg>
+              </div>
+              <h3>Conscious Choices</h3>
+              <p>Beauty made with a more considered approach toward sustainable packaging and ethics.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. BRAND STORY SECTION (Asymmetrical Layout) -->
+      <section class="brand-story-section section-spacing" id="about" aria-labelledby="storyHeading">
+        <div class="container">
+          <div class="story-asymmetrical-grid">
+            <!-- LEFT: Large portrait/lifestyle image -->
+            <div class="story-media">
+              <img src="assets/images/brand-story.jpg" alt="Editorial GLOSERIOUSIN magazine portrait" />
+              <div class="story-badge">
+                <span>EST. 2026</span>
+                <small>PARIS & NEW YORK</small>
+              </div>
+            </div>
+
+            <!-- RIGHT: Editorial Text -->
+            <div class="story-content">
+              <span class="story-eyebrow">OUR STORY</span>
+              <h2 class="story-heading" id="storyHeading">
+                Beauty Begins With Feeling Good In Your Own Skin.
+              </h2>
+              <p class="story-paragraph">
+                GLOSERIOUSIN was created around a simple belief: beauty isn't about becoming someone else. It's about
+                feeling confident in the skin you're already in.
+              </p>
+              <p class="story-paragraph">
+                Our approach brings together thoughtful formulas, beautiful rituals, and a modern perspective on
+                everyday beauty. Every texture, from our dewy serums to whipped cloud moisturizers, is engineered to
+                feel weightless while delivering transformative barrier nourishment.
+              </p>
+              <div style="margin-top: 2rem;">
+                <button class="btn btn-primary"
+                  onclick="App.showToast('GLOSERIOUSIN: Founded on conscious, radiant self-care.')">
+                  MEET GLOSERIOUSIN
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. TESTIMONIAL SECTION -->
+      <section class="testimonials-section section-spacing" aria-labelledby="testHeading">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">REAL EXPERIENCES</span>
+            <h2 class="section-title" id="testHeading">Loved By Our Community</h2>
+            <p class="section-subtitle">Real feedback from women embracing their natural glow every day.</p>
+          </div>
+          <div class="testimonials-grid" id="testimonialsGrid">
+            <!-- Populated from data.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 13. SOCIAL / INSTAGRAM SECTION -->
+      <section class="social-section section-spacing" aria-labelledby="instaHeading">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">COMMUNITY</span>
+            <h2 class="section-title" id="instaHeading">@GLOSERIOUSIN</h2>
+            <p class="section-subtitle">Join the glow.</p>
+          </div>
+          <div class="social-grid" id="instagramGrid">
+            <!-- 6 images populated from data.js -->
+          </div>
+          <div style="text-align: center;">
+            <button class="btn btn-secondary"
+              onclick="App.showToast('Follow @GLOSERIOUSIN for daily ritual inspiration!')">
+              FOLLOW OUR JOURNEY
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14. JOURNAL SECTION -->
+      <section class="journal-section section-spacing" id="journal" aria-labelledby="journalHeading">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">EDITORIAL NOTES</span>
+            <h2 class="section-title" id="journalHeading">From The Journal</h2>
+            <p class="section-subtitle">Skin knowledge, slow beauty practices, and intentional living.</p>
+          </div>
+          <div class="journal-grid" id="journalGrid">
+            <!-- 3 large article cards populated from data.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 15. NEWSLETTER SECTION -->
+      <section class="newsletter-section" aria-labelledby="newsHeading">
+        <div class="container">
+          <div class="newsletter-box">
+            <h2 class="newsletter-title" id="newsHeading">Stay In The Glow</h2>
+            <p class="newsletter-desc">
+              Sign up for beauty notes, new launches, exclusive offers, and rituals worth making time for.
+            </p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" class="newsletter-input" id="newsletterEmail" placeholder="Enter your email address"
+                required aria-label="Email address" />
+              <button type="submit" class="newsletter-btn">
+                JOIN US
+              </button>
+            </form>
+            <small class="newsletter-privacy">
+              By subscribing, you agree to receive emails from GLOSERIOUSIN.
+            </small>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /homeView -->
+
+
+    <!-- ----------------------------------------------------------------------
+         VIEW 2: SHOP ALL PAGE
+         ---------------------------------------------------------------------- -->
+    <div id="shopView" class="shop-page-view" aria-label="Shop All Products">
+      <div class="shop-header-banner">
+        <div class="container">
+          <span class="section-eyebrow">COMPLETE CATALOGUE</span>
+          <h1 class="shop-title">SHOP ALL</h1>
+          <p class="shop-description">
+            Explore our collection of thoughtful beauty essentials designed for everyday rituals.
+          </p>
+        </div>
+      </div>
+
+      <!-- Category Filter Sticky Bar -->
+      <div class="shop-filter-bar">
+        <div class="container">
+          <div class="shop-controls-wrapper">
+            <!-- Filter Pills -->
+            <div class="category-filter-pills" role="tablist">
+              <button class="filter-pill active" data-category="all" onclick="App.filterCategory('all')">All</button>
+              <button class="filter-pill" data-category="skincare"
+                onclick="App.filterCategory('skincare')">Skincare</button>
+              <button class="filter-pill" data-category="face" onclick="App.filterCategory('face')">Face</button>
+              <button class="filter-pill" data-category="haircare"
+                onclick="App.filterCategory('haircare')">Haircare</button>
+              <button class="filter-pill" data-category="bodycare"
+                onclick="App.filterCategory('bodycare')">Body</button>
+              <button class="filter-pill" data-category="fragrance"
+                onclick="App.filterCategory('fragrance')">Fragrance</button>
+            </div>
+
+            <!-- Sort By & Counters -->
+            <div class="shop-secondary-controls">
+              <span class="shop-item-counter" id="shopCountDisplay">Showing 10 essentials</span>
+              <div class="sort-select-wrapper">
+                <select class="sort-select" id="shopSortSelect" onchange="App.sortProducts(this.value)"
+                  aria-label="Sort products">
+                  <option value="featured">Sort By: Featured</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shop Products Grid -->
+      <div class="container shop-grid-container">
+        <div class="product-grid" id="shopProductsGrid">
+          <!-- Populated from data.js -->
+        </div>
+      </div>
+    </div><!-- /shopView -->
+
+
+    <!-- ----------------------------------------------------------------------
+         VIEW 3: PRODUCT DETAIL PAGE (PDP)
+         ---------------------------------------------------------------------- -->
+    <div id="pdpView" class="pdp-page-view" aria-label="Product Detail Page">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="pdp-breadcrumbs" aria-label="Breadcrumbs">
+          <a href="#home" onclick="Navigation.switchView('home')">Home</a>
+          <span>/</span>
+          <a href="#shop" onclick="Navigation.switchView('shop')">Shop</a>
+          <span>/</span>
+          <span id="pdpBreadcrumbCategory">Skincare</span>
+          <span>/</span>
+          <span class="current" id="pdpBreadcrumbName">Dew Glow Serum</span>
+        </nav>
+
+        <!-- Main Product Layout Grid -->
+        <div class="pdp-main-grid">
+          <!-- LEFT: Image Gallery with Thumbnails -->
+          <div class="pdp-gallery-wrap">
+            <div class="pdp-thumbnails" id="pdpThumbnails">
+              <!-- Thumbnails inserted by PDP.js -->
+            </div>
+            <div class="pdp-main-media">
+              <img id="pdpMainImage" src="assets/images/dew-glow-serum.jpg" alt="GLOSERIOUSIN Product" />
+            </div>
+          </div>
+
+          <!-- RIGHT: Product Specifications & Purchase Actions -->
+          <div class="pdp-info-wrap">
+            <span class="pdp-category-eyebrow" id="pdpCategory">SERUM</span>
+            <h1 class="pdp-product-title" id="pdpTitle">DEW GLOW SERUM</h1>
+
+            <div class="pdp-rating-row">
+              <div class="star-rating">
+                ★★★★★ <span class="rating-score" id="pdpRatingScore">4.9</span>
+              </div>
+              <span class="pdp-review-count" id="pdpReviewCount"
+                onclick="document.getElementById('accReviewsHeader').click();">(142 Reviews)</span>
+            </div>
+
+            <div class="pdp-price" id="pdpPrice">$38.00</div>
+
+            <p class="pdp-lead-description" id="pdpDescription">
+              A lightweight glow-boosting serum created to hydrate and leave skin looking fresh, smooth, and naturally
+              radiant.
+            </p>
+
+            <div class="pdp-size-row">
+              <span class="pdp-size-label">Size:</span>
+              <span class="pdp-size-value" id="pdpSize">30 ml</span>
+            </div>
+
+            <div class="pdp-purchase-row">
+              <div class="quantity-stepper">
+                <button class="qty-btn" onclick="PDP.updateQuantity(-1)" aria-label="Decrease quantity">−</button>
+                <input type="text" class="qty-input" id="pdpQtyInput" value="1" readonly
+                  aria-label="Selected quantity" />
+                <button class="qty-btn" onclick="PDP.updateQuantity(1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="btn btn-primary pdp-add-to-bag-btn" onclick="PDP.addToBag()">
+                ADD TO BAG
+              </button>
+            </div>
+
+            <button class="pdp-wishlist-action-btn" id="pdpWishlistBtn" data-product-id="dew-glow-serum"
+              onclick="Wishlist.toggle(this.getAttribute('data-product-id'))">
+              ♡ ADD TO WISHLIST
+            </button>
+
+            <!-- Accordions: Description, Benefits, Ingredients, How To Use, Reviews -->
+            <div class="pdp-accordions-wrap">
+              <!-- 1. Description -->
+              <div class="pdp-accordion-item is-open">
+                <button class="pdp-accordion-header" onclick="PDP.toggleAccordion(this)">
+                  <span>Description</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="pdp-accordion-body" id="accDescriptionBody">
+                  <div class="pdp-accordion-body-inner">
+                    <!-- Injected -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Benefits -->
+              <div class="pdp-accordion-item">
+                <button class="pdp-accordion-header" onclick="PDP.toggleAccordion(this)">
+                  <span>Benefits</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="pdp-accordion-body" id="accBenefitsBody">
+                  <div class="pdp-accordion-body-inner">
+                    <!-- Injected -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Ingredients -->
+              <div class="pdp-accordion-item">
+                <button class="pdp-accordion-header" onclick="PDP.toggleAccordion(this)">
+                  <span>Ingredients</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="pdp-accordion-body" id="accIngredientsBody">
+                  <div class="pdp-accordion-body-inner">
+                    <!-- Injected -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. How To Use -->
+              <div class="pdp-accordion-item">
+                <button class="pdp-accordion-header" onclick="PDP.toggleAccordion(this)">
+                  <span>How To Use</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="pdp-accordion-body" id="accHowToUseBody">
+                  <div class="pdp-accordion-body-inner">
+                    <!-- Injected -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Reviews -->
+              <div class="pdp-accordion-item">
+                <button class="pdp-accordion-header" id="accReviewsHeader" onclick="PDP.toggleAccordion(this)">
+                  <span>Customer Reviews</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="pdp-accordion-body" id="accReviewsBody">
+                  <div class="pdp-accordion-body-inner">
+                    <!-- Injected -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- "Pairs beautifully with" Related Products Carousel / Grid -->
+        <div class="pairs-with-section">
+          <h2 class="pairs-with-title">Pairs beautifully with</h2>
+          <div class="product-grid" id="pairsWithGrid">
+            <!-- Populated by PDP.js -->
+          </div>
+        </div>
+      </div>
+    </div><!-- /pdpView -->
+
+  </main>
+
+
+  <!-- ========================================================================
+       16. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-main-grid">
+        <!-- Column 1: Brand Info -->
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">GLOSERIOUSIN</a>
+          <p>Beauty designed around your natural glow. Minimal, conscious rituals formulated with purpose.</p>
+          <div style="font-size: 0.8125rem; color: var(--color-dusty-blush);">
+            Sustainable Glass & Certified Clean Formulas
+          </div>
+        </div>
+
+        <!-- Column 2: SHOP -->
+        <div>
+          <h3 class="footer-heading">SHOP</h3>
+          <ul class="footer-links-list">
+            <li><a href="#shop" onclick="App.filterCategoryAndGo('skincare')">Skincare</a></li>
+            <li><a href="#shop" onclick="App.filterCategoryAndGo('face')">Face</a></li>
+            <li><a href="#shop" onclick="App.filterCategoryAndGo('haircare')">Haircare</a></li>
+            <li><a href="#shop" onclick="App.filterCategoryAndGo('bodycare')">Body Care</a></li>
+            <li><a href="#shop" onclick="App.filterCategoryAndGo('newarrivals')">New Arrivals</a></li>
+            <li><a href="#bestsellers"
+                onclick="Navigation.switchView('home'); setTimeout(() => document.getElementById('bestsellers').scrollIntoView(), 150);">Best
+                Sellers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: ABOUT -->
+        <div>
+          <h3 class="footer-heading">ABOUT</h3>
+          <ul class="footer-links-list">
+            <li><a href="#about"
+                onclick="Navigation.switchView('home'); setTimeout(() => document.getElementById('about').scrollIntoView(), 150);">Our
+                Story</a></li>
+            <li><a href="#philosophy"
+                onclick="Navigation.switchView('home'); setTimeout(() => document.getElementById('philosophy').scrollIntoView(), 150);">Ingredients</a>
+            </li>
+            <li><a href="#journal"
+                onclick="Navigation.switchView('home'); setTimeout(() => document.getElementById('journal').scrollIntoView(), 150);">Journal</a>
+            </li>
+            <li><a href="mailto:care@gloseriousin.com"
+                onclick="event.preventDefault(); App.showToast('Support email: care@gloseriousin.com');">Contact</a>
+            </li>
+            <li><a href="#faq"
+                onclick="event.preventDefault(); App.showToast('FAQ: Clean beauty, cruelty-free, sustainable packaging.');">FAQ</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: HELP -->
+        <div>
+          <h3 class="footer-heading">HELP</h3>
+          <ul class="footer-links-list">
+            <li><a href="#shipping"
+                onclick="event.preventDefault(); App.showToast('Free complimentary standard shipping on all orders over $50.');">Shipping</a>
+            </li>
+            <li><a href="#returns"
+                onclick="event.preventDefault(); App.showToast('30-day gentle return policy on all unopened items.');">Returns</a>
+            </li>
+            <li><a href="#privacy"
+                onclick="event.preventDefault(); App.showToast('GLOSERIOUSIN values your personal privacy.');">Privacy</a>
+            </li>
+            <li><a href="#terms"
+                onclick="event.preventDefault(); App.showToast('Standard terms of service.');">Terms</a></li>
+            <li><a href="#track"
+                onclick="event.preventDefault(); App.showToast('Track your parcel via your tracking confirmation.');">Track
+                Order</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          GLOSERIOUSIN © 2026. All rights reserved.
+        </div>
+
+        <!-- Social Icons -->
+        <div class="footer-social-icons">
+          <a href="#instagram" class="footer-social-link" aria-label="GLOSERIOUSIN on Instagram"
+            onclick="event.preventDefault(); App.showToast('Instagram: @GLOSERIOUSIN');">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="#pinterest" class="footer-social-link" aria-label="GLOSERIOUSIN on Pinterest"
+            onclick="event.preventDefault(); App.showToast('Pinterest: @GLOSERIOUSIN');">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+          </a>
+          <a href="#tiktok" class="footer-social-link" aria-label="GLOSERIOUSIN on TikTok"
+            onclick="event.preventDefault(); App.showToast('TikTok: @GLOSERIOUSIN');">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
+          </a>
+          <a href="#facebook" class="footer-social-link" aria-label="GLOSERIOUSIN on Facebook"
+            onclick="event.preventDefault(); App.showToast('Facebook: @GLOSERIOUSIN');">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Payment Badges -->
+        <div class="footer-payments">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">AMEX</span>
+          <span class="payment-badge">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================================================
+       19. CART DRAWER (Slide-out from Right)
+       ======================================================================== -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Your Shopping Bag" role="dialog" aria-modal="true">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">YOUR BAG <span id="cartDrawerCount">(0 items)</span></h3>
+      <button class="drawer-close-btn" id="closeCartBtn" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Indicator ($50 threshold) -->
+    <div class="free-shipping-bar-wrap">
+      <div class="free-shipping-message" id="freeShippingMsg">
+        You're <strong>$12.00</strong> away from free shipping.
+      </div>
+      <div class="free-shipping-progress-bg">
+        <div class="free-shipping-progress-fill" id="freeShippingBar" style="width: 76%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll Area -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Injected by cart.js -->
+    </div>
+
+    <!-- Cart Footer & Calculation -->
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$38.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Shipping</span>
+        <span id="cartShipping">$6.00</span>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Total</span>
+        <span id="cartTotal">$44.00</span>
+      </div>
+      <div class="cart-actions-group">
+        <button class="btn btn-primary btn-block" id="cartCheckoutBtn">CHECKOUT</button>
+        <button class="btn btn-secondary btn-block" id="continueShoppingBtn">CONTINUE SHOPPING</button>
+      </div>
+    </div>
+  </aside>
+
+
+  <!-- ========================================================================
+       WISHLIST DRAWER
+       ======================================================================== -->
+  <aside class="wishlist-drawer" id="wishlistDrawer" aria-label="Your Wishlist" role="dialog" aria-modal="true">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">SAVED RITUALS</h3>
+      <button class="drawer-close-btn" id="closeWishlistBtn" aria-label="Close wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-items-list" id="wishlistItemsList">
+      <!-- Injected by wishlist.js -->
+    </div>
+  </aside>
+
+
+  <!-- ========================================================================
+       QUICK VIEW MODAL
+       ======================================================================== -->
+  <div class="quickview-modal" id="quickViewModal" role="dialog" aria-modal="true" aria-label="Quick View">
+    <button class="modal-close-btn" id="quickViewClose" aria-label="Close modal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div id="quickViewBody"></div>
+  </div>
+
+
+  <!-- ========================================================================
+       LIVE SEARCH OVERLAY MODAL
+       ======================================================================== -->
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Live Search">
+    <button class="modal-close-btn" id="searchCloseBtn" aria-label="Close search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="container">
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search formulas, rituals, ingredients..."
+          aria-label="Search formulas" />
+      </div>
+      <div class="search-results-grid" id="searchResultsGrid">
+        <!-- Real-time matches injected by app.js -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================
+       CHECKOUT SIMULATION MODAL
+       ======================================================================== -->
+  <div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Checkout">
+    <button class="modal-close-btn" id="checkoutCloseBtn" aria-label="Close checkout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="checkout-header">
+      <span class="section-eyebrow">EXPRESS SECURE CHECKOUT</span>
+      <h3>Complete Your Glow Order</h3>
+      <p style="font-size: 0.875rem; color: var(--color-espresso-muted);">Encrypted 256-bit luxury boutique fulfillment
+      </p>
+    </div>
+
+    <form id="checkoutForm">
+      <div class="checkout-form-grid">
+        <div class="checkout-field-full">
+          <label class="checkout-label">Email Address</label>
+          <input type="email" class="checkout-input" placeholder="emma.rose@example.com" required />
+        </div>
+        <div>
+          <label class="checkout-label">First Name</label>
+          <input type="text" class="checkout-input" placeholder="Emma" required />
+        </div>
+        <div>
+          <label class="checkout-label">Last Name</label>
+          <input type="text" class="checkout-input" placeholder="Rose" required />
+        </div>
+        <div class="checkout-field-full">
+          <label class="checkout-label">Shipping Address</label>
+          <input type="text" class="checkout-input" placeholder="742 Evergreen Terrace, Apt 4B" required />
+        </div>
+        <div>
+          <label class="checkout-label">City</label>
+          <input type="text" class="checkout-input" placeholder="New York" required />
+        </div>
+        <div>
+          <label class="checkout-label">Postal / ZIP Code</label>
+          <input type="text" class="checkout-input" placeholder="10001" required />
+        </div>
+        <div class="checkout-field-full">
+          <label class="checkout-label">Card Number</label>
+          <input type="text" class="checkout-input" placeholder="•••• •••• •••• 4242" value="4532 8901 2345 8890"
+            required />
+        </div>
+      </div>
+
+      <div class="checkout-summary-box">
+        <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 6px;">
+          <span>Subtotal</span>
+          <span id="checkoutSubtotal">$38.00</span>
+        </div>
+        <div
+          style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 6px; color: var(--color-success-green);">
+          <span>Carbon-Neutral Packaging</span>
+          <span>Complimentary</span>
+        </div>
+        <div
+          style="display: flex; justify-content: space-between; font-size: 1.0625rem; font-weight: 600; padding-top: 8px; border-top: 1px dashed var(--color-light-border);">
+          <span>Total</span>
+          <span id="checkoutTotal">$38.00</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" style="height: 52px;">
+        CONFIRM & PLACE ORDER
+      </button>
+    </form>
+  </div>
+
+
+  <!-- Universal Modal & Drawer Backdrop -->
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/pdp.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

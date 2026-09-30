@@ -1,0 +1,94 @@
+/* ==========================================================================
+   GLOSERIOUSIN - LUXURY DESIGN SYSTEM VARIABLES
+   ========================================================================== */
+
+:root {
+  /* Primary Colors */
+  --color-warm-ivory: #F8F4EE;   /* Main page background */
+  --color-soft-cream: #FFFDF9;   /* Cards, nav, alternating sections */
+  --color-deep-espresso: #2B211D;/* Primary text and headings (NO pure black) */
+  --color-muted-rose: #C98F8F;   /* Accent for buttons, highlights, badges */
+  --color-dusty-blush: #E8C9C5;  /* Secondary accent / background */
+
+  /* Supporting Colors */
+  --color-warm-taupe: #A89589;
+  --color-soft-sage: #AAB5A0;    /* Organic / natural messaging */
+  --color-white: #FFFFFF;
+  --color-light-border: #E5DDD4;
+  --color-success-green: #71856A;
+  
+  /* Nuanced Tones */
+  --color-espresso-muted: rgba(43, 33, 29, 0.72);
+  --color-espresso-subtle: rgba(43, 33, 29, 0.45);
+  --color-espresso-ghost: rgba(43, 33, 29, 0.08);
+  --color-rose-hover: #B77C7C;
+  --color-blush-light: #F4E8E5;
+  --color-overlay-warm: rgba(43, 33, 29, 0.28);
+  --color-overlay-dark: rgba(20, 15, 13, 0.45);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-serif-heading: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* Font Sizes */
+  --fs-xs: 0.75rem;     /* 12px */
+  --fs-sm: 0.875rem;    /* 14px */
+  --fs-base: 1rem;      /* 16px (15-17px) */
+  --fs-md: 1.125rem;    /* 18px */
+  --fs-h3: 1.5rem;      /* 24px (22-28px) */
+  --fs-h2: 2.5rem;      /* 40px (38-48px) */
+  --fs-h1: 4rem;        /* 64px (56-72px) */
+  --fs-eyebrow: 0.8125rem; /* 13px */
+
+  /* Line Heights */
+  --lh-tight: 1.15;
+  --lh-heading: 1.25;
+  --lh-body: 1.65;
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;  /* 4px */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4.5rem;   /* 72px */
+  --space-4xl: 6rem;     /* 96px */
+
+  /* Layout Containers */
+  --container-max: 1360px;
+  --container-pad: 2rem;
+  --container-pad-mobile: 1.25rem;
+
+  /* Border Radius */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Component Heights */
+  --height-nav: 74px;
+  --height-announcement: 36px;
+  --height-button: 48px;
+
+  /* Subtle Luxury Shadows (Never heavy) */
+  --shadow-subtle: 0 4px 20px -2px rgba(43, 33, 29, 0.05);
+  --shadow-card-hover: 0 8px 30px -4px rgba(43, 33, 29, 0.08);
+  --shadow-drawer: -8px 0 40px rgba(43, 33, 29, 0.12);
+  --shadow-modal: 0 16px 50px rgba(43, 33, 29, 0.14);
+
+  /* Transitions */
+  --transition-fast: 200ms cubic-bezier(0.2, 0, 0, 1);
+  --transition-normal: 300ms cubic-bezier(0.2, 0, 0, 1);
+  --transition-slow: 400ms cubic-bezier(0.2, 0, 0, 1);
+  --transition-ease: 350ms ease-in-out;
+}
